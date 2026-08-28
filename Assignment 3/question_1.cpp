@@ -11,48 +11,40 @@ private:
 
 public:
 
-    // Default constructor
     Cylinder() : radius(0), height(0)
     {
     }
 
-    // Parameterized constructor
     Cylinder(double r, double h) : radius(r), height(h)
     {
     }
 
-    // Getter
     double getRadius()
     {
         return radius;
     }
 
-    // Setter
     void setRadius(double r)
     {
         radius = r;
     }
 
-    // Getter
     double getHeight()
     {
         return height;
     }
 
-    // Setter
     void setHeight(double h)
     {
         height = h;
     }
 
-    // Calculate volume
     double calculateVolume()
     {
         return PI * radius * radius * height;
     }
 };
 
-// Initialize static variable
 const double Cylinder::PI = 3.14;
 
 
