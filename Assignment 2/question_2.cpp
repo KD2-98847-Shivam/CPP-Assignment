@@ -18,27 +18,24 @@ class tollbooth
 
 public:
 
-    // Constructor
     tollbooth()
     {
         totalCars = 0;
         totalCash = 0;
     }
-
-    // Function for paying car
     void payingCar()
     {
         totalCars++;
         totalCash = totalCash + 0.50;
     }
 
-    // Function for non-paying car
+
     void nopayCar()
     {
         totalCars++;
     }
 
-    // Function to display totals
+
     void printOnConsole()
     {
         int payingCars;
