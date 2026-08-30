@@ -1,68 +1,68 @@
-#include <iostream>
+/*Q1. Write a class to find volume of a Cylinder by using following members. (volume of 
+Cylinder=3.14 * radius * radius *height) ( use static wherever needed. hint-PI) 
+Class having following member functions: 
+Cylinder() 
+Cylinder(double radius, double height) 
+getRadius() 
+setRadius() 
+getHeight() 
+setHeight() 
+calculateVolume() 
+Initialize members using constructor member initializer list*/
+
+#include<iostream>
 using namespace std;
 
 class Cylinder
 {
-private:
+    private:
     double radius;
     double height;
-
-    static const double PI;
-
-public:
-
-    // Default constructor
-    Cylinder() : radius(0), height(0)
+   
+     static const double PI ;
+    public:
+     
+    
+    Cylinder(void) : radius(0) , height(0)  
+    {  }
+    Cylinder(double radius , double height ) : radius(radius) , height(height) 
+    {  }
+    void setRadius(double radius)
     {
+        this->radius = radius;
     }
-
-    // Parameterized constructor
-    Cylinder(double r, double h) : radius(r), height(h)
+    void setHeight(double height)
     {
+        this->height = height;
     }
-
-    // Getter
-    double getRadius()
+    double getRadius(void)
     {
-        return radius;
+        return this->radius;
     }
-
-    // Setter
-    void setRadius(double r)
+    double getHeight(void)
     {
-        radius = r;
+        return this->height;
     }
-
-    // Getter
-    double getHeight()
-    {
-        return height;
-    }
-
-    // Setter
-    void setHeight(double h)
-    {
-        height = h;
-    }
-
-    // Calculate volume
+    
     double calculateVolume()
     {
-        return PI * radius * radius * height;
+        return PI*radius*radius*height;
+        
     }
+
+
+    
 };
 
-// Initialize static variable
-const double Cylinder::PI = 3.14;
-
+   const double Cylinder::PI = 3.14;
 
 int main()
 {
-    Cylinder c1(5, 10);
-
-    cout << "Radius : " << c1.getRadius() << endl;
-    cout << "Height : " << c1.getHeight() << endl;
-    cout << "Volume : " << c1.calculateVolume() << endl;
-
+    Cylinder c;
+    c.setRadius(5);
+    c.setHeight(10);
+    c.getRadius();
+    c.getHeight();
+    cout<<"Volume of Cylinder:"<<c.calculateVolume();
     return 0;
 }

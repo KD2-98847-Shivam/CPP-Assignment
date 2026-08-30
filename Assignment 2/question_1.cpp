@@ -1,7 +1,7 @@
  /*Q1. Write a menu driven program to calculate volume of the box(length * width * height). 
 Provide parameterless, parameterized(with 3 parameters) and single paramaterized constructor. 
 Create the local objects in respective case and call the function to caluclate area. 
-Menu options ->  
+Menu options->  
 1. Calculate Volume with default values 
 2. Calculate Volume with length,breadth and height with same value 
 3. Calculate Volume with different length,breadth and height values.*/
@@ -18,7 +18,6 @@ class Box
 
     public:
 
-    // parameterless constructor
     Box()
     {
         length = 1;
@@ -27,7 +26,6 @@ class Box
 
     }
 
-    // single parametrised constructor
     Box(int value)
     {
         length = value;
@@ -35,7 +33,6 @@ class Box
         height  = value;
     }
 
-    // parametrised constructor 
     Box(int l , int w , int h)
     {
         length = l;
@@ -45,7 +42,7 @@ class Box
 
     int CalculateVolume()
     {
-        return length * width * height; // volume calculation
+        return length * width * height; 
     }
 
 };
@@ -67,7 +64,7 @@ int main()
     {
         case 1:
         {
-            Box b; // object of class Box
+            Box b; 
             cout<<"Volume = "<<b.CalculateVolume()<<endl;
             break; 
 
